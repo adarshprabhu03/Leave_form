@@ -1,0 +1,103 @@
+.fillpart{
+    background-color:#ffcece;
+}
+.mainSection{
+    margin: 0px;
+    background-color: #F9F9C5;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height:400px;
+    height:100%;
+}
+.imageContainer{
+    width:40%;
+    color:red;
+}
+.imageContainer img{
+    border-radius: 90%;
+    width:60%;
+    margin-left: 4em;
+}
+.contentBox{
+    background-color: #D9F8C4;
+    width:50%;
+    padding-left: 1em;
+    margin: 2em;
+}
+.contentBox h1{
+    font-size: 4.5rem;
+    color:#A0D995;
+    font-family: 'Poppins', sans-serif;
+}
+.contentBox p{
+    font-size:1.5rem;
+    margin:1em 0;
+    font-family: 'Poppins', sans-serif;
+}
+.btnBox{
+
+    display:flex;
+    justify-content: space-around;
+    margin: 2em;
+}
+.btn{
+    border:2px solid transparent;
+    border-radius: 2em;
+    background-image: linear-gradient(#fff,#fff),
+    radial-gradient(circle at bottom right,purple,orange);
+    background-origin:border-box;
+    background-clip:content-box,border-box;
+    margin:1em;
+}
+.readmore{
+    display:inline-block;
+    font-size:0.5em 1.5em;
+    padding:1em;
+    text-decoration: none;
+    color:#A0D995;
+    background-color: #F9F9C5;
+    border-radius: 1.9em;
+
+}
+.btnBox2{
+    display:flex;
+    width:100%;
+    justify-content: space-around;
+    margin-top: 2em;
+    background-color:#D9F8C4;
+}
+.btn2{
+    border:2px solid transparent;
+    border-radius: 2em;
+    background-image: linear-gradient(#fff,#fff),
+    radial-gradient(circle at bottom right,purple,orange);
+    background-origin:border-box;
+    background-clip:content-box,border-box;
+    margin:1em;
+}
+
+.LeaveForm{
+    display:inline-block;
+    font-size:0.5em 1.5em;
+    padding:2em 1em;
+    text-decoration: none;
+    color:#A0D995;
+    background-color: #F9F9C5;
+    border-radius: 1.9em;
+}
+@media screen and (max-width:768px){
+    html{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:629px){
+    html{
+        font-size: 10px;
+    }
+    .mainSection{
+        flex-direction: column;
+        margin-top: 1em;
+    }
+}
+
