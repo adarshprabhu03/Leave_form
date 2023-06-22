@@ -1,13 +1,11 @@
-import React from 'react';
-import { Container, Table } from 'react-bootstrap';
-
-const LeaveStatus = () => {
-  const leaveStatusData = [
-    { id: 1, startDate: '2023-06-15', endDate: '2023-06-20', status: 'Approved' },
-    { id: 2, startDate: '2023-06-25', endDate: '2023-06-30', status: 'Pending' },
-    { id: 3, startDate: '2023-07-05', endDate: '2023-07-10', status: 'Rejected' }
-  ];
-
+import React from 'react'
+import { Table } from 'react-bootstrap';
+const LeaveApproveProctor = () => {
+    const leaveStatusData = [
+        { id: 1, startDate: '2023-06-15', endDate: '2023-06-20'},
+        { id: 2, startDate: '2023-06-25', endDate: '2023-06-30'},
+        { id: 3, startDate: '2023-07-05', endDate: '2023-07-10'}
+      ];
   return (
     <div style={{backgroundColor:'#D9F8C4'}}> <>
     <h1 style={{ marginBottom: '20px' }}>LEAVE STATUS</h1>
@@ -32,9 +30,7 @@ const LeaveStatus = () => {
         </tbody>
       </Table>
     </></div>
-   
-      
-  );
+  )
 }
 
-export default LeaveStatus;
+export default LeaveApproveProctor
