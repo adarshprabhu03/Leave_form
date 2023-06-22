@@ -1,12 +1,14 @@
-
 import Axios from "axios";
+import Cookies from "js-cookie";
 import React from 'react';
 import { useState } from 'react';
 import '../Css/leaveformstyle.css';
 function LeaveForm() {
-    const url = ""
+    const userCookie = Cookies.get('userCookie');
+    
+    const url = "http://192.168.253.204:5000/leave"
     const [data, setData] = useState({
-        reg_no: "",
+        reg_no: Cookies.get('userCookie'),
         addr: "",
         purpose: "",
         out_time: "",
@@ -30,6 +32,14 @@ function LeaveForm() {
         })
             .then(res => {
                 console.log(res.data)
+                setData({
+                    reg_no: "",
+                    addr: "",
+                    purpose: "",
+                    out_time: "",
+                    in_time: ""
+            
+                });
             })
 
     }
@@ -41,7 +51,7 @@ function LeaveForm() {
                 <form className="finalform" id="sample-form" onSubmit={(e) => submit(e)}>
                     <div>
                         <label htmlFor="reg_no">REGISTER NUMBER</label>
-                        <input type="text" id="reg_no" onChange={(e) => handle(e)} value={data.reg_no} placeholder="Enter Your Registration-Number" name="reg_no" required />
+                        <input disabled type="text" id="reg_no" onChange={(e) => handle(e)} value={data.reg_no} placeholder="Enter Your Registration-Number" name="reg_no" required />
 
                     </div>
                     <div>

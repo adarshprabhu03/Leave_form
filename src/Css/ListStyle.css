@@ -32,6 +32,13 @@ header{
     color:rgb(255, 255, 255);
     border-bottom: 0.1em solid white;
 }
+.logoutButton {
+    font-size: 12px; /* Adjust the font size as needed */
+    padding: 4px 8px; /* Adjust the padding as needed */
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+  }
 @media screen and (max-width:900px){
     html{
         font-size: 13px;

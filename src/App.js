@@ -9,13 +9,13 @@ import error from './component/error';
 import List from './component/List';
 import Login from './component/Login';
 import SignUp from './component/SignUp';
-import LeaveApproveProctor from './component/LeaveApproveProctor';
+import LeaveApproveProctor from './component/ProctorComponent/LeaveApproveProctor';
 function App() {
   return (
     <>
      
-      <LeaveApproveProctor/>
-      {/*<Login/>*/}
+      {/*<LeaveApproveProctor/>*/}
+      <Login/>
       
        {/*<List/>
 
