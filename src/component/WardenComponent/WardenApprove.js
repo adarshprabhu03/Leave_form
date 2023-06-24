@@ -4,7 +4,7 @@ import axios from 'axios';
 import '../../Css/LeaveApprove.css';
 import Cookies from 'js-cookie';
 
-const LeaveApproveProctor = () => {
+const WardenApprove = () => {
   const [leaveStatusData, setLeaveStatusData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const leavesPerPage = 5;
@@ -12,7 +12,7 @@ const LeaveApproveProctor = () => {
   const fetchLeaveData = async () => {
     try {
       const userCookie = Cookies.get('userCookie');
-      const response = await axios.get(`http://192.168.253.204:5000/leave_proctor?username=${userCookie}`);
+      const response = await axios.get(`http://192.168.253.204:5000/leave_warden?username=${userCookie}`);
       console.log(response.data);
       setLeaveStatusData(response.data);
     } catch (error) {
@@ -42,7 +42,7 @@ const LeaveApproveProctor = () => {
       console.log(`Leave ID: ${leaveId}, Status: ${leave.status}`);
   
       // Make a POST request to the endpoint
-      const response = await axios.post('http://192.168.253.204:5000/proctor_approve', {
+      const response = await axios.post('http://192.168.253.204:5000/warden_approve', {
         status: Number(leave.status),
         leave_id: leaveId
       });
@@ -171,4 +171,4 @@ const LeaveApproveProctor = () => {
   );
 };
 
-export default LeaveApproveProctor;
+export default WardenApprove;

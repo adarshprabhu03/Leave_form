@@ -10,14 +10,14 @@ import List from './component/List';
 import Login from './component/Login';
 import SignUp from './component/SignUp';
 import LeaveApproveProctor from './component/ProctorComponent/LeaveApproveProctor';
+import ProctorHome from './component/ProctorComponent/ProctorHome';
+import ProcList from './component/ProctorComponent/ProcList';
 function App() {
   return (
     <>
-     
-      {/*<LeaveApproveProctor/>*/}
+    
       <Login/>
-      
-       {/*<List/>
+      {/*<List/>
 
    <Switch>
       <Route exact path="/" component={Home}/>

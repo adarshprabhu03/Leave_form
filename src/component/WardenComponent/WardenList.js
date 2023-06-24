@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../images/logo.png';
 import '../../Css/ListStyle.css';
 import Cookies from 'js-cookie';
-const ProcList=()=>{
+const WardenList=()=>{
     const handleclick=async (e)=>{
         Cookies.remove('userCookie');
         window.location.reload();
@@ -28,4 +28,4 @@ const ProcList=()=>{
 
     )
 }
-export default ProcList;
+export default WardenList;

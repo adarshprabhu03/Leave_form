@@ -36,7 +36,7 @@ const LeaveStatus = () => {
                 style={{
                     backgroundColor: '#FFCECE', // Set the background color of the pink box
                     padding: '20px',
-                    maxWidth: '600px' // Adjust the width of the pink box as needed
+                    maxWidth: '800px' // Adjust the width of the pink box as needed
                 }}
             >
                 <>
@@ -45,6 +45,8 @@ const LeaveStatus = () => {
                         <thead>
                             <tr>
                                 <th className="text-center" style={{ paddingRight: '80px' }}>Leave ID</th>
+                                <th className="text-center" style={{ paddingRight: '80px' }}>Visiting Place</th>
+                                <th className="text-center" style={{ paddingRight: '80px' }}>Purpose</th>
                                 <th className="text-center" style={{ paddingRight: '100px' }}>Start Date</th>
                                 <th className="text-center" style={{ paddingRight: '100px' }}>End Date</th>
                                 <th className="text-center" style={{ paddingRight: '10px' }}>Status</th>
@@ -54,6 +56,8 @@ const LeaveStatus = () => {
                             {leaveStatusData.map((leave) => (
                                 <tr key={leave.leave_id}>
                                     <td className="text-center">{leave.leave_id}</td>
+                                    <td className="text-center">{leave.address}</td>
+                                    <td className="text-center">{leave.purpose}</td>
                                     <td className="text-center" style={{ paddingRight: '50px' }}>{new Date(leave.out_time).toLocaleString()}</td>
                                     <td className="text-center" style={{ paddingRight: '50px' }}>{new Date(leave.in_time).toLocaleString()}</td>
                                     <td className="text-center">
